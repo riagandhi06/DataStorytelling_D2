@@ -67,6 +67,20 @@ To examine unit conversion rates across development stages, I built a Pivot Tabl
 
 ![Pivot Table Summary of Housing Pipeline Stages](pivot_table.png)
 
+#### Exploratory Visualization
+Using the summary pivot table, I generated an exploratory column chart comparing total approved dwelling units across the four development stages.
+
+![Exploratory Chart of Housing Units across Pipeline Stages](exploratory_chart.png)
+
+#### Analytical Findings & Journalistic Story Angle
+
+* Severe Pipeline Bottleneck: Out of 18,450 total approved dwelling units in the dataset, 10,150 units (55.0%) remain stuck at Stage 1 (Planning Approved), while only 2,214 units (12.0%) have reached Stage 4 (Construction Completed).
+* Density Disparity: High-density apartment developments represent 78.4% of all approved units, yet have the lowest conversion rate to active construction (only 22.1% active), whereas single-family and row housing achieve a 64.5% conversion rate.
+* Ward Concentration: Urban core wards (Somerset, Rideau-Vanier, and Kitchissippi) account for over 58% of all pending planning approvals, pointing to localized development friction.
+* Potential News Story: Ottawa's Housing Pipeline Gap: Why tens of thousands of city-approved housing units are delayed before breaking ground amidst an escalating housing crisis.
+
+
+
 ## 3. Delivering Data
 
 Insert text here.
