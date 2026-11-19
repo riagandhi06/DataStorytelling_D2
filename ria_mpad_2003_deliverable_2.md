@@ -14,9 +14,19 @@ The raw data was accessed via the Open Ottawa Housing Data Hub portal. To analyz
 
 * Public Spreadsheet Link: https://docs.google.com/spreadsheets/d/1t_ed0XrftnDFWNFgSexk8WGgaqlS_EKZpuiYndzRnlg/edit?usp=sharing
 
+![Raw Dataset in Google Sheets](raw_data.png)
 
+The imported dataset contains 250 project rows and 7 core variables.
+* Column A (PROJECT_ID): Represents nominal qualitative variables containing unique alphanumeric codes assigned to each housing proposal. No duplicate project identifiers were identified during initial validation.
+* Column C (DWELLING_TYPE): Represents nominal categorical variables classifying building density (e.g., "Apartment / High-Rise", "Townhouse / Row", "Single Detached").
+* Column D (PIPELINE_STAGE): Represents ordinal categorical variables tracking project progression ("1. Planning Approved", "2. Building Permit Issued", "3. Construction Commenced", "4. Construction Completed").
+* Column E (APPROVED_UNITS): Represents quantitative discrete variables measuring the number of approved housing units associated with each permit application.
 
 ## 2. Understanding Data
+
+
+
+
 
 ### 2.1. VIMO Analysis
 
