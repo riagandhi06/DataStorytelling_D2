@@ -66,9 +66,6 @@ I performed three data-cleaning operations in Google Sheets to normalize the wor
 To examine unit conversion rates across development stages, I built a Pivot Table in Google Sheets grouping PIPELINE_STAGE in rows and aggregating APPROVED_UNITS (SUM) alongside project counts (COUNTA).
 
 ![Pivot Table Summary of Housing Pipeline Stages](pivot_table.png)
-Insert text here.
-
-
 
 ## 3. Delivering Data
 
