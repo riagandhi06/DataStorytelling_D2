@@ -40,14 +40,14 @@ To evaluate data quality and integrity prior to exploratory analysis, I performe
 | 4. Outlier Data | High-density multi-residential projects approving 200+ units that remain in pre-construction for over 400 days. |
 
 * Valid Data: Nominal ward identifiers and discrete unit counts conformed to standard municipal planning definitions established in the City of Ottawa Housing Approvals Dashboard (City of Ottawa, 2025).
-* Invalid Data: Text formatting noise occurred in category columns. Trailing whitespaces in DWELLING_TYPE caused Google Sheets to process identical building types as distinct categories during initial pivot aggregation (Marier, 2024).
+* Invalid Data: Text formatting noise occurred in category columns. Trailing whitespaces in DWELLING_TYPE caused Google Sheets to process identical building types as distinct categories during initial pivot aggregation.
 * Missing Data: Unfinished projects contained empty cells for completion dates. As Statistics Canada (2020) highlights, missing values in administrative tracking data reflect active, ongoing cases rather than missing measurement records.
 * Outlier Data: Extreme duration outliers were observed in high-density urban wards. While single-detached homes progress from permit issuance to construction within 60 days, major apartment developments in urban wards experience pre-construction delays exceeding 400 days.
 
 
 ### 2.2. Cleaning Data
 
-I performed three data-cleaning operations in Google Sheets to normalize the working file (Marier, 2024):
+I performed three data-cleaning operations in Google Sheets to normalize the working file :
 
 1. Whitespace Trimming & Duplicates Removal: Executed Data > Data cleanup > Trim whitespace to remove hidden spaces, followed by Remove duplicates across PROJECT_ID.
 2. Formula-Based Status Binary Encoding: Created a calculated helper column (IS_CONSTRUCTED) to classify active construction status numerically:
@@ -83,12 +83,46 @@ Using the summary pivot table, I generated an exploratory column chart comparing
 
 ## 3. Delivering Data
 
-Insert text here.
+### Further Investigative Story Angle
+
+To expand this research into a full news story, I would investigate the core question: What financial, interest-rate, municipal servicing, or supply-chain obstacles prevent developers from converting approved high-density planning applications into active construction starts?
+
+## Additional Data & Records Needed
+
+1. Freedom of Information (FOI) Requests: City of Ottawa Planning and Building Services internal review timeline logs, infrastructure capacity allocation reports, and developer site-plan agreement execution delays.
+2. CMHC & Economic Data: Integrating CMHC monthly housing start reports with Bank of Canada interest rate histories and municipal development charge fee schedules.
+
+### Expert & Community Interviews
+
+* City Planning Official: The General Manager of Planning, Development and Building Services to address municipal approval bottlenecks and site-plan turnaround targets.
+* Housing Industry Developer / Researcher: A representative from the Greater Ottawa Building Development Association (GOHBA) or a senior housing policy researcher from the Smart Prosperity Institute to explain developer financing constraints.
+* Affordable Housing Advocate: A representative from Ottawa ACORN discussing how pre-construction delays impact tenant housing availability and rent affordability.
+
+### Contextual Sources
+
+* Ottawa Housing Acceleration Plan Reports: Municipal policy documents outlining strategies to accelerate housing delivery (City of Ottawa, 2025).
+* CMHC Housing Supply Reports: Federal reports tracking housing starts and completion trends in Ottawa-Gatineau (CMHC, 2026).
+
 
 ## 4. References
 
-Include a list of your references here. Please follow [APA](https://apastyle.apa.org/style-grammar-guidelines/references) or [MLA](https://www.mla.org/MLA-Style) guidelines for references. Hanging paragraphs aren't required though.
+* Canada Mortgage and Housing Corporation. (2026). Housing starts up at 5.6% in 2025 from 2024. : https://www.cmhc-schl.gc.ca/media-newsroom/news-releases/2026/housing-starts-december-2025
 
-**Here's an example:**
 
-Bounegru, L., & Gray, J. (Eds.). (2021). *The Data Journalism Handbook 2: Towards A Critical Data Practice*. Amsterdam University Press. [https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153](https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153)
+* City of Ottawa. (2025). Definitions: Housing approvals dashboard. :
+https://ottawa.ca/en/planning-development-and-construction/housing-and-development-reports/housing-approvals-dashboard/definitions
+https://ottawa.ca/en/planning-development-and-construction/housing-and-development-reports/housing-approvals-dashboard/dashboard
+
+* Gray, J., Chambers, L., & Bounegru, L. (Eds.). (2012). The Data Journalism Handbook: How Journalists Can Use Data to Improve the News. O'Reilly Media. : https://datajournalism.com
+
+
+* Statistics Canada. (2020). Data accuracy and validation: Methods to ensure the quality of data. Government of Canada. :
+https://www.statcan.gc.ca/en/wtc/data-literacy/catalogue/892000062020008
+
+
+* Statistics Canada. (2021). Statistics: Power from Data! Government of Canada. :
+https://www150.statcan.gc.ca/n1/edu/power-pouvoir/toc-tdm/5214718-eng.htm
+
+### AI Disclosure Statement
+
+For the integrity guidelines, I used Ai for assistance during the preparation of this assignment. It was used to assist with guidance to achieve formula's, troubleshooting GitHub terminal commands, reviewing steps of the assignments and report syntax.
