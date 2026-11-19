@@ -47,23 +47,28 @@ To evaluate data quality and integrity prior to exploratory analysis, I performe
 
 ### 2.2. Cleaning Data
 
+I performed three data-cleaning operations in Google Sheets to normalize the working file (Marier, 2024):
+
+1. Whitespace Trimming & Duplicates Removal: Executed Data > Data cleanup > Trim whitespace to remove hidden spaces, followed by Remove duplicates across PROJECT_ID.
+2. Formula-Based Status Binary Encoding: Created a calculated helper column (IS_CONSTRUCTED) to classify active construction status numerically:
+   ```excel
+   =IF(OR(D2="3. Construction Commenced", D2="4. Construction Completed"), 1, 0)
+   ```
+3. Categorical Text Standardization: Standardized building type classifications using:
+   ```excel
+   =UPPER(TRIM(C2))
+   ```
+
+![Cleaned Dataset in Google Sheets](cleaned_data.png)
+
+
+### 2.3. Analyzing Data
 To examine unit conversion rates across development stages, I built a Pivot Table in Google Sheets grouping PIPELINE_STAGE in rows and aggregating APPROVED_UNITS (SUM) alongside project counts (COUNTA).
 
 ![Pivot Table Summary of Housing Pipeline Stages](pivot_table.png)
-
-### 2.3. Analyzing Data
-
 Insert text here.
 
-**This section should include a screen capture of your pivot table, like so:**
 
-![](pivot-table-screen-capture.png)<br>
-*Figure 2: This pivot table shows...*
-
-**This section should also include a screen capture of your exploratory chart, like so:**
-
-![](chart-screen-capture.png)<br>
-*Figure 3: This exploratory chart shows...*
 
 ## 3. Delivering Data
 
