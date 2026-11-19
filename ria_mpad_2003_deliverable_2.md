@@ -26,28 +26,30 @@ The imported dataset contains 250 project rows and 7 core variables.
 
 Investigative Question: At which stage of Ottawa's residential development pipeline does the largest drop-pff in ousing unit production occur, and do high-density multi-residential apartment developments face greater conversion delays between planning approval and active construction than low-density single-family housing?
 
-
 ## 2. Understanding Data
-
-
-
-
 
 ### 2.1. VIMO Analysis
 
-Use three hashtag symbols (`###`) to create a level 3 heading like this one. Please follow this template when it comes to level 1 and level 2 headings. However, you can use level 3 headings as you see fit.
+To evaluate data quality and integrity prior to exploratory analysis, I performed a systematic VIMO analysis (Valid, Invalid, Missing, and Outlier data) focusing on development stages and unit counts (Statistics Canada, 2021).
 
-Insert text here.
+| Category | Dataset Observations & Concrete Examples |
+| :--- | :--- |
+| 1. Valid Data | Standardized ward names (e.g., "Somerset", "Kitchissippi") and positive integer values in APPROVED_UNITS. |
+| 2. Invalid Data | Inconsistent stage spacing and mixed text casing (e.g., "1. planning approved " vs "1. Planning Approved"). |
+| 3. Missing Data | Blank completion timestamps for projects currently waiting at the planning approval or building permit stage. |
+| 4. Outlier Data | High-density multi-residential projects approving 200+ units that remain in pre-construction for over 400 days. |
 
-Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
+* Valid Data: Nominal ward identifiers and discrete unit counts conformed to standard municipal planning definitions established in the City of Ottawa Housing Approvals Dashboard (City of Ottawa, 2025).
+* Invalid Data: Text formatting noise occurred in category columns. Trailing whitespaces in DWELLING_TYPE caused Google Sheets to process identical building types as distinct categories during initial pivot aggregation (Marier, 2024).
+* Missing Data: Unfinished projects contained empty cells for completion dates. As Statistics Canada (2020) highlights, missing values in administrative tracking data reflect active, ongoing cases rather than missing measurement records.
+* Outlier Data: Extreme duration outliers were observed in high-density urban wards. While single-detached homes progress from permit issuance to construction within 60 days, major apartment developments in urban wards experience pre-construction delays exceeding 400 days.
 
-**For example:**
-
-As seen in Bounegru & Gray (2011), a data visualization should be clear...
 
 ### 2.2. Cleaning Data
 
-Insert text here.
+To examine unit conversion rates across development stages, I built a Pivot Table in Google Sheets grouping PIPELINE_STAGE in rows and aggregating APPROVED_UNITS (SUM) alongside project counts (COUNTA).
+
+![Pivot Table Summary of Housing Pipeline Stages](pivot_table.png)
 
 ### 2.3. Analyzing Data
 
